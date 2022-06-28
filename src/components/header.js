@@ -1,13 +1,20 @@
-import React from "react";
+import React from 'react'
 import { Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
+import styled from 'styled-components'
 
-export default function Header() {
+const StyledLogo = styled.div`
+  width: 270px;
+  padding: 30px 0;
+  float: right;
+`
+
+export default function Header () {
   return (
-    <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
-      <Link to="/" className="hover:underline">
-        Blog
+    <StyledLogo>
+      <Link to='/' className='hover:underline'>
+        <StaticImage src='../images/logo.png' alt='expurtle logo' />
       </Link>
-      .
-    </h2>
+    </StyledLogo>
   )
 }

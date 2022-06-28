@@ -1,19 +1,20 @@
-import React from "react";
-import Container from "../components/container";
-import HeroPost from "../components/hero-post";
-import Intro from "../components/intro";
-import MoreStories from "../components/more-stories";
-import { HelmetDatoCms } from "gatsby-source-datocms";
-import { graphql } from "gatsby";
+import React from 'react'
+import Container from '../components/container'
+import HeroPost from '../components/hero-post'
+import Intro from '../components/intro'
+import MoreStories from '../components/more-stories'
+import { HelmetDatoCms } from 'gatsby-source-datocms'
+import { graphql } from 'gatsby'
+import Header from '../components/header'
 
-export default function Index({ data: { allPosts, site, blog } }) {
-  const heroPost = allPosts.nodes[0];
-  const morePosts = allPosts.nodes.slice(1);
+export default function Index ({ data: { allPosts, site, blog } }) {
+  const heroPost = allPosts.nodes[0]
+  const morePosts = allPosts.nodes.slice(1)
 
   return (
     <Container>
       <HelmetDatoCms seo={blog.seo} favicon={site.favicon} />
-      <Intro />
+      <Header />
       {heroPost && (
         <HeroPost
           title={heroPost.title}
@@ -26,7 +27,7 @@ export default function Index({ data: { allPosts, site, blog } }) {
       )}
       {morePosts.length > 0 && <MoreStories posts={morePosts} />}
     </Container>
-  );
+  )
 }
 
 export const query = graphql`
@@ -65,4 +66,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
