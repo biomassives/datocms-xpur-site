@@ -1,5 +1,12 @@
-import React from "react";
+import React from 'react'
+import styled from 'styled-components'
+import { pageMargins } from './styles/utils'
 
-export default function Container({ children }) {
-  return <div className="container mx-auto px-5">{children}</div>
+const StyledContainer = styled.section`
+  ${pageMargins};
+  position: relative;
+`
+
+export default function Container ({ children }) {
+  return <StyledContainer>{children}</StyledContainer>
 }

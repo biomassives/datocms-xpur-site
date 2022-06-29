@@ -5,13 +5,6 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import StyledButton from './styles/StyledButton'
 
-const StyledButtonsContainer = styled.div`
-  display: grid;
-  grid-gap: 20px;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr;
-`
-
 const StyledCoverImage = styled.div`
   width: 100%;
   height: 600px;
@@ -57,10 +50,6 @@ export default function CoverImage ({ title, fluid, slug }) {
         <p style={{ color: '#243755' }} className='text-1xl py-6 w-80'>
           The Leading Digital Marketplace for Investment Experts
         </p>
-        <StyledButtonsContainer>
-          <StyledButton>Register</StyledButton>
-          <StyledButton>Book an intro call</StyledButton>
-        </StyledButtonsContainer>
       </StyledCoverImage>
     </div>
   )
