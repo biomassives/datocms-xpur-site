@@ -20,7 +20,9 @@ const StyledLinks = styled.div`
 const StyledHeader = styled.nav`
   width: 100%;
   position: relative;
-  height: 180px;
+  height: 100px;
+  overflow: hidden;
+  ${pageMargins};
 `
 
 const StyledLogo = styled.div`

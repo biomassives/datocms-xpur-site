@@ -58,6 +58,7 @@ export const GridLeft = styled.div`
           display: flex;
           flex-direction: column;
           justify-content: center;
+          align-items: center;
         `
       : ''}
 `
@@ -68,4 +69,13 @@ export const GridCenter = styled.article`
 
 export const GridRight = styled.div`
   grid-area: right;
+  ${({ center }) =>
+    center
+      ? css`
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        `
+      : ''}
 `

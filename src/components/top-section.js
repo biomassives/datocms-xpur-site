@@ -2,14 +2,23 @@ import React from 'react'
 import styled from 'styled-components'
 import StyledButton from './styles/StyledButton'
 import { GridLeft, GridRight, TwoColumnGrid } from './styles/styles'
-import { pageMargins } from './styles/utils'
+import { pageMargins, color } from './styles/utils'
 import { StaticImage } from 'gatsby-plugin-image'
 
 const Container = styled.div`
   width: 100%;
   position: relative;
-  height: 90vh;
-  min-height: 600px;
+  height: 70vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  ${pageMargins};
+  ${TwoColumnGrid} {
+    height: 100%;
+  }
+  ${GridLeft} {
+    align-items: flex-start;
+  }
 `
 
 const StyledButtonsContainer = styled.div`
@@ -20,7 +29,7 @@ const StyledButtonsContainer = styled.div`
 `
 
 const Title = styled.h1`
-  color: #243755;
+  color: ${color.darkblue};
   font-size: 5rem;
   font-weight: bold;
   font-family: avenir;
@@ -40,11 +49,8 @@ const TopSection = () => {
             <StyledButton theme='blue'>Book an intro call</StyledButton>
           </StyledButtonsContainer>
         </GridLeft>
-        <GridRight>
-          <StaticImage
-            src='../images/expert-giving-advice.jpg'
-            alt='expert graphic'
-          />
+        <GridRight center>
+          <StaticImage src='../images/logo-large.jpg' alt='expert graphic' />
         </GridRight>
       </TwoColumnGrid>
     </Container>

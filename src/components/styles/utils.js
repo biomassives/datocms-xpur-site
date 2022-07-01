@@ -32,7 +32,7 @@ export const typography = {
     m2: '1.375rem',
     m3: '2.25rem',
     l1: '3.625rem',
-    l2: '16.33rem',
+    l2: '6.33rem',
     l3: '10.625rem'
   }
 }

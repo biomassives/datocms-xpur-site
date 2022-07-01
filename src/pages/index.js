@@ -1,23 +1,23 @@
 import React from 'react'
-import Container from '../components/container'
+import Layout from '../components/layout'
 import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
 import MoreStories from '../components/more-stories'
-import { HelmetDatoCms } from 'gatsby-source-datocms'
+
 import { graphql } from 'gatsby'
-import Header from '../components/header'
 import TopSection from '../components/top-section'
+import SecondSection from '../components/second-section'
+import ThirdSection from '../components/third-section'
 
 export default function Index ({ data: { allPosts, site, blog } }) {
   const heroPost = allPosts.nodes[0]
   const morePosts = allPosts.nodes.slice(1)
 
   return (
-    <Container>
-      <HelmetDatoCms seo={blog.seo} favicon={site.favicon} />
-      <Header />
+    <Layout seo={{}} site={site}>
       <TopSection />
-    </Container>
+      <SecondSection />
+      <ThirdSection />
+    </Layout>
   )
 }
 
