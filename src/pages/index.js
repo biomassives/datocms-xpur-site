@@ -7,6 +7,8 @@ import { graphql } from 'gatsby'
 import TopSection from '../components/top-section'
 import SecondSection from '../components/second-section'
 import ThirdSection from '../components/third-section'
+import VideoSection from '../components/video-section'
+import ExpertiseSection from '../components/expertise-section'
 
 export default function Index ({ data: { allPosts, site, blog } }) {
   const heroPost = allPosts.nodes[0]
@@ -17,6 +19,8 @@ export default function Index ({ data: { allPosts, site, blog } }) {
       <TopSection />
       <SecondSection />
       <ThirdSection />
+      <VideoSection />
+      <ExpertiseSection />
     </Layout>
   )
 }

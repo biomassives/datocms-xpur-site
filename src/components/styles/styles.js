@@ -65,6 +65,15 @@ export const GridLeft = styled.div`
 
 export const GridCenter = styled.article`
   grid-area: center;
+  ${({ center }) =>
+    center
+      ? css`
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        `
+      : ''}
 `
 
 export const GridRight = styled.div`
