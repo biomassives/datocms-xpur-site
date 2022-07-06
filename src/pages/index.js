@@ -9,6 +9,7 @@ import SecondSection from '../components/second-section'
 import ThirdSection from '../components/third-section'
 import VideoSection from '../components/video-section'
 import ExpertiseSection from '../components/expertise-section'
+import ApplySection from '../components/apply-section'
 
 export default function Index ({ data: { allPosts, site, blog } }) {
   const heroPost = allPosts.nodes[0]
@@ -21,6 +22,7 @@ export default function Index ({ data: { allPosts, site, blog } }) {
       <ThirdSection />
       <VideoSection />
       <ExpertiseSection />
+      <ApplySection />
     </Layout>
   )
 }

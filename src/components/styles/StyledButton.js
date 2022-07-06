@@ -7,18 +7,14 @@ const darkTheme = css`
 `
 
 const blueTheme = css`
-  background: linear-gradient(
-    138deg,
-    rgba(17, 214, 219, 1) 0%,
-    rgba(56, 136, 191, 1) 100%
-  );
+  background: linear-gradient(138deg, ${color.aqua} 0%, ${color.midblue} 100%);
   color: white;
 `
 
 const lightTheme = css`
-  color: ${color.darkblue};
+  color: ${color.midblue};
   background-color: white;
-  border: 1px solid ${color.darkblue};
+  border: 1px solid ${color.midblue};
 `
 
 const themes = {

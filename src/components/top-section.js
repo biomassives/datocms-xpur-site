@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 import StyledButton from './styles/StyledButton'
 import { GridLeft, GridRight, TwoColumnGrid } from './styles/styles'
 import { pageMargins, color } from './styles/utils'
@@ -9,16 +10,33 @@ const Container = styled.div`
   width: 100%;
   position: relative;
   height: 70vh;
-  min-height: 500px;
+  min-height: 800px;
   display: flex;
   align-items: center;
+  padding-top: 100px;
+
   ${pageMargins};
   ${TwoColumnGrid} {
     height: 100%;
   }
   ${GridLeft} {
-    align-items: flex-start;
+    @media only screen and (min-width: 1024px) {
+      align-items: flex-start;
+    }
+    & > p {
+      line-height: 24px;
+    }
   }
+  ${GridRight} {
+    @media only screen and (min-width: 1024px) {
+      align-items: flex-end;
+    }
+  }
+  background: linear-gradient(
+    to bottom left,
+    rgba(4, 201, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
 `
 
 const StyledButtonsContainer = styled.div`
@@ -35,22 +53,38 @@ const Title = styled.h1`
   font-family: avenir;
 `
 
+const ImageContainer = styled.div`
+  max-width: 25rem;
+  width: 100%;
+  position: relative;
+`
+
 const TopSection = () => {
   return (
     <Container>
       <TwoColumnGrid>
         <GridLeft center>
           <Title>Expurtle</Title>
-          <p style={{ color: '#243755' }} className='text-1xl py-6 w-80'>
+          <p style={{ color: '#243755' }} className='text-1xl pb-6 pt-2 w-80'>
             The Leading Digital Marketplace for Investment Experts
           </p>
           <StyledButtonsContainer>
-            <StyledButton theme='dark'>Register</StyledButton>
-            <StyledButton theme='blue'>Book an intro call</StyledButton>
+            <Link to='/register'>
+              <StyledButton theme='dark'>Register</StyledButton>
+            </Link>
+            <a
+              href='mailto:adrian.d@expurtle.com'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <StyledButton theme='blue'>Book an intro call</StyledButton>
+            </a>
           </StyledButtonsContainer>
         </GridLeft>
         <GridRight center>
-          <StaticImage src='../images/logo-large.jpg' alt='expert graphic' />
+          <ImageContainer>
+            <StaticImage src='../images/logo-large.png' alt='expert graphic' />
+          </ImageContainer>
         </GridRight>
       </TwoColumnGrid>
     </Container>

@@ -6,7 +6,8 @@ import {
   ThreeColumnGrid,
   GridLeft,
   GridCenter,
-  GridRight
+  GridRight,
+  TwoColumnGrid
 } from './styles/styles'
 
 const Container = styled.section`
@@ -17,47 +18,74 @@ const Container = styled.section`
   padding-bottom: 80px;
   & ${GridLeft}, ${GridRight}, ${GridCenter} {
     display: flex;
-    align-items: center;
     justify-content: center;
+    text-align: left;
+    flex-direction: column;
     & h3 {
       font-size: 24px;
+      text-decoration: underline;
+    }
+  }
+  & ${GridRight} {
+    @media only screen and (min-width: 1024px) {
+      align-items: center;
     }
   }
   & h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+`
+
+const TickContainer = styled.ul`
+  position: relative;
+  list-style: none;
+  & li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
   }
 `
 
 const ImageContainer = styled.div`
   width: 80px;
   position: relative;
+  margin-right: 15px;
 `
 
 const ExpertiseSection = () => {
   return (
     <Container>
-      <h2>Do you have investment expertise worth sharing?</h2>
-      <h2>Are you interested in earning money for helping other investors?</h2>
-      <ThreeColumnGrid>
+      <TwoColumnGrid>
         <GridLeft>
-          <ImageContainer>
-            <StaticImage src='../images/tick.png' alt='expert graphic' />
-          </ImageContainer>
-          <h3>Share Your Knowledge</h3>
+          <h2>Do you have investment expertise worth sharing?</h2>
+          <h2>
+            Are you interested in earning money for helping other investors?
+          </h2>
         </GridLeft>
-        <GridCenter>
-          <ImageContainer>
-            <StaticImage src='../images/tick.png' alt='expert graphic' />
-          </ImageContainer>
-          <h3>Build your networks</h3>
-        </GridCenter>
         <GridRight>
-          <ImageContainer>
-            <StaticImage src='../images/tick.png' alt='expert graphic' />
-          </ImageContainer>
-          <h3>Get paid</h3>
+          <TickContainer>
+            <li>
+              <ImageContainer>
+                <StaticImage src='../images/tick.png' alt='expert graphic' />
+              </ImageContainer>
+              <h3>Share Your Knowledge</h3>
+            </li>
+            <li>
+              <ImageContainer>
+                <StaticImage src='../images/tick.png' alt='expert graphic' />
+              </ImageContainer>
+              <h3>Build your networks</h3>
+            </li>
+            <li>
+              <ImageContainer>
+                <StaticImage src='../images/tick.png' alt='expert graphic' />
+              </ImageContainer>
+              <h3>Get paid</h3>
+            </li>
+          </TickContainer>
         </GridRight>
-      </ThreeColumnGrid>
+      </TwoColumnGrid>
     </Container>
   )
 }

@@ -20,7 +20,7 @@ const Contents = styled.div`
   }
   & h2 {
     font-size: ${typography.size.l2};
-    background: rgb(18, 214, 219);
+    background: ${color.aqua};
     height: 260px;
     width: 260px;
     text-align: center;
@@ -54,7 +54,6 @@ const Contents = styled.div`
 const Container = styled.div`
   position: relative;
   width: 100%;
-  padding-top: 80px;
   padding-bottom: 80px;
   display: flex;
   flex-direction: column;

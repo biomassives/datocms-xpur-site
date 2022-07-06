@@ -5,10 +5,14 @@ import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import { pageMargins } from './styles/utils'
 
+const HEADER_HEIGHT = '70px'
+
 const StyledLinks = styled.div`
-  padding: 30px 0;
+  line-height: ${HEADER_HEIGHT};
   float: right;
   display: flex;
+  z-index: 1;
+  position: relative;
   & p {
     font-size: 18px;
     font-family: avenir;
@@ -19,24 +23,26 @@ const StyledLinks = styled.div`
 
 const StyledHeader = styled.nav`
   width: 100%;
-  position: relative;
-  height: 100px;
-  overflow: hidden;
+  position: absolute;
+  height: ${HEADER_HEIGHT};
   ${pageMargins};
+  background: white;
+  z-index: 1;
+  box-shadow: 0px 4px 55px rgba(17, 44, 76, 0.1);
 `
 
 const StyledLogo = styled.div`
-  width: 240px;
-  height: 100px;
+  width: 137px;
+  height: 70px;
   float: left;
   position: relative;
-  margin-top: 10px;
+  margin-top: 17px;
 `
 
 export default function Header () {
   return (
     <StyledHeader>
-      <StyledLogo>
+      <StyledLogo className='hey'>
         <StaticImage src='../images/logo.png' alt='expert graphic' />
       </StyledLogo>
       <StyledLinks>

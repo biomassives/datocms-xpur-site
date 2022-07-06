@@ -8,7 +8,7 @@ const Container = styled.section`
   position: relative;
   width: 100%;
   ${pageMargins};
-  height: 600px;
+  padding-bottom: 80px;
   ${GridRight} {
     align-items: flex-start;
     h2 {

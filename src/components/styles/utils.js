@@ -38,9 +38,9 @@ export const typography = {
 }
 
 export const color = {
-  aqua: '#12D6DB',
-  darkblue: '#274F77',
-  midblue: '#3E7DBB'
+  aqua: 'rgba(4,201,255,1)',
+  darkblue: 'rgba(17,44,76,1)',
+  midblue: 'rgba(1,105,254,1)'
 }
 
 export const breakpoint = 600

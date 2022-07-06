@@ -12,8 +12,8 @@ const Container = styled.section`
   background: linear-gradient(
     138deg,
     rgba(255, 255, 255, 1) 0%,
-    rgba(17, 214, 219, 1) 51%,
-    rgba(56, 136, 191, 1) 94%
+    ${color.aqua} 51%,
+    ${color.darkblue} 94%
   );
   & h2 {
     font-family: avenir;
