@@ -28,9 +28,9 @@ const VideoSection = () => {
   return (
     <Container>
       <h2>How it works</h2>
-      <div style={{ padding: '50.21% 0 0 0', position: 'relative' }}>
+      <div style={{ padding: '55.85% 0 0 0', position: 'relative' }}>
         <iframe
-          src='https://player.vimeo.com/video/433129383?h=bb6b748263&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+          src='https://player.vimeo.com/video/727775677?h=94756a3d5d&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
           frameborder='0'
           allow='autoplay; fullscreen; picture-in-picture'
           allowfullscreen
@@ -40,7 +40,9 @@ const VideoSection = () => {
             left: 0,
             width: '100%',
             height: '100%',
-            borderRadius: '12px'
+            borderRadius: '12px',
+            boxShadow:
+              '20px 20px 60px rgba(17,44,76,0.4), -20px -20px 60px rgb(255 255 255 / 40%)'
           }}
           title='LFW Schedule Page'
         />

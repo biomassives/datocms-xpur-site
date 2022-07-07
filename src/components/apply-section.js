@@ -12,8 +12,7 @@ const Container = styled.section`
   padding-top: 60px;
   padding-bottom: 60px;
   & h2 {
-    font-size: 2.5rem;
-    text-align: center;
+    font-size: 2rem;
   }
   background: ${color.aqua};
 `

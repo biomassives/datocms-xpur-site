@@ -16,14 +16,18 @@ const Container = styled.section`
   width: 100%;
   padding-top: 80px;
   padding-bottom: 80px;
+  background: linear-gradient(
+    to top right,
+    rgba(4, 201, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
   & ${GridLeft}, ${GridRight}, ${GridCenter} {
     display: flex;
     justify-content: center;
     text-align: left;
     flex-direction: column;
     & h3 {
-      font-size: 24px;
-      text-decoration: underline;
+      font-size: 22px;
     }
   }
   & ${GridRight} {
@@ -40,6 +44,11 @@ const Container = styled.section`
 const TickContainer = styled.ul`
   position: relative;
   list-style: none;
+  padding: 34px 41px 20px 41px;
+  background: rgba(4, 201, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 20px 20px 60px rgba(17, 44, 76, 0.15),
+    -20px -20px 60px rgb(255 255 255 / 15%);
   & li {
     margin-bottom: 20px;
     display: flex;
@@ -48,9 +57,9 @@ const TickContainer = styled.ul`
 `
 
 const ImageContainer = styled.div`
-  width: 80px;
+  width: 70px;
   position: relative;
-  margin-right: 15px;
+  margin-right: 18px;
 `
 
 const ExpertiseSection = () => {
