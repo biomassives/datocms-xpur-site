@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import { pageMargins } from '../components/styles/utils'
+import RegisterForm from '../components/register-form'
 
 const Container = styled.section`
   width: 100%;
@@ -34,17 +35,9 @@ const Container = styled.section`
 const Register = () => {
   return (
     <Layout>
-      <Helmet>
-        <script>
-          {`(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '69441');`}
-        </script>
-      </Helmet>
       <Container>
-        <div className='ml-embedded' data-form='6PdgFJ' />
+        <h1>Register</h1>
+        <RegisterForm />
       </Container>
     </Layout>
   )

@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/camjones/.nvm/versions/node/v16.14.0/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js develop
+  /Users/camjones/.nvm/versions/node/v16.14.0/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js dev
 
 PATH: 
   /Users/camjones/.rbenv/shims:/Users/camjones/.rbenv/shims:/Users/camjones/.nvm/versions/node/v16.14.0/bin:/Users/camjones/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/camjones/.rbenv/shims:/Users/camjones/bin
@@ -45,14 +45,17 @@ npm manifest:
       "gatsby-source-datocms": "^4.0.4",
       "gatsby-source-filesystem": "^4.17.0",
       "gatsby-transformer-sharp": "^4.0.0",
+      "node-fetch": "^3.2.8",
       "postcss": "^8.3.6",
       "react": "^17.0.2",
       "react-datocms": "^1.6.3",
       "react-dom": "^17.0.2",
       "react-helmet": "^6.1.0",
       "react-helmet-async": "^1.3.0",
+      "react-hook-form": "^7.33.1",
       "styled-components": "^5.3.5",
-      "tailwindcss": "^2.0.3"
+      "tailwindcss": "^2.0.3",
+      "validator": "^13.7.0"
     },
     "resolutions": {
       "trim": "0.0.3",
@@ -3561,6 +3564,10 @@ Lockfile:
     dependencies:
       assert-plus "^1.0.0"
   
+  data-uri-to-buffer@^4.0.0:
+    version "4.0.0"
+    resolved "https://registry.yarnpkg.com/data-uri-to-buffer/-/data-uri-to-buffer-4.0.0.tgz#b5db46aea50f6176428ac05b73be39a57701a64b"
+  
   dataloader@2.0.0:
     version "2.0.0"
     resolved "https://registry.npmjs.org/dataloader/-/dataloader-2.0.0.tgz"
@@ -4654,6 +4661,13 @@ Lockfile:
     version "0.0.3"
     resolved "https://registry.npmjs.org/fd/-/fd-0.0.3.tgz"
   
+  fetch-blob@^3.1.2, fetch-blob@^3.1.4:
+    version "3.2.0"
+    resolved "https://registry.yarnpkg.com/fetch-blob/-/fetch-blob-3.2.0.tgz#f09b8d4bbd45adc6f0c20b7e787e793e309dcce9"
+    dependencies:
+      node-domexception "^1.0.0"
+      web-streams-polyfill "^3.0.3"
+  
   figures@^3.0.0:
     version "3.2.0"
     resolved "https://registry.npmjs.org/figures/-/figures-3.2.0.tgz"
@@ -4825,6 +4839,12 @@ Lockfile:
       asynckit "^0.4.0"
       combined-stream "^1.0.6"
       mime-types "^2.1.12"
+  
+  formdata-polyfill@^4.0.10:
+    version "4.0.10"
+    resolved "https://registry.yarnpkg.com/formdata-polyfill/-/formdata-polyfill-4.0.10.tgz#24807c31c9d402e002ab3d8c720144ceb8848423"
+    dependencies:
+      fetch-blob "^3.1.2"
   
   formidable@^1.2.0:
     version "1.2.2"
@@ -7731,6 +7751,10 @@ Lockfile:
     version "4.3.0"
     resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-4.3.0.tgz#52a1a0b475193e0928e98e0426a0d1254782b77f"
   
+  node-domexception@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/node-domexception/-/node-domexception-1.0.0.tgz#6888db46a1f71c0b76b3f7555016b63fe64766e5"
+  
   node-emoji@^1.11.0:
     version "1.11.0"
     resolved "https://registry.npmjs.org/node-emoji/-/node-emoji-1.11.0.tgz"
@@ -7750,6 +7774,14 @@ Lockfile:
     resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.5.tgz"
     dependencies:
       whatwg-url "^5.0.0"
+  
+  node-fetch@^3.2.8:
+    version "3.2.8"
+    resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-3.2.8.tgz#0d9516dcf43a758d78d6dbe538adf0b1f6a4944e"
+    dependencies:
+      data-uri-to-buffer "^4.0.0"
+      fetch-blob "^3.1.4"
+      formdata-polyfill "^4.0.10"
   
   node-gyp-build-optional-packages@5.0.2:
     version "5.0.2"
@@ -8933,6 +8965,10 @@ Lockfile:
       prop-types "^15.7.2"
       react-fast-compare "^3.1.1"
       react-side-effect "^2.1.0"
+  
+  react-hook-form@^7.33.1:
+    version "7.33.1"
+    resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.33.1.tgz#8c4410e3420788d3b804d62cc4c142915c2e46d0"
   
   react-intersection-observer@^8.31.1:
     version "8.32.1"
@@ -10671,6 +10707,10 @@ Lockfile:
     version "1.0.9"
     resolved "https://registry.npmjs.org/valid-url/-/valid-url-1.0.9.tgz"
   
+  validator@^13.7.0:
+    version "13.7.0"
+    resolved "https://registry.yarnpkg.com/validator/-/validator-13.7.0.tgz#4f9658ba13ba8f3d82ee881d3516489ea85c0857"
+  
   value-or-promise@1.0.11:
     version "1.0.11"
     resolved "https://registry.npmjs.org/value-or-promise/-/value-or-promise-1.0.11.tgz"
@@ -10742,6 +10782,10 @@ Lockfile:
   weak-lru-cache@^1.2.2:
     version "1.2.2"
     resolved "https://registry.yarnpkg.com/weak-lru-cache/-/weak-lru-cache-1.2.2.tgz#fdbb6741f36bae9540d12f480ce8254060dccd19"
+  
+  web-streams-polyfill@^3.0.3:
+    version "3.2.1"
+    resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.2.1.tgz#71c2718c52b45fd49dbeee88634b3a60ceab42a6"
   
   webidl-conversions@^3.0.0:
     version "3.0.1"
@@ -11046,16 +11090,14 @@ Lockfile:
     resolved "https://registry.npmjs.org/zwitch/-/zwitch-2.0.2.tgz"
 
 Trace: 
-  Error: Command failed.
-  Exit code: 1
-  Command: sh
-  Arguments: -c gatsby develop
-  Directory: /Users/camjones/Development/datocms-expurtle-site
-  Output:
-  
-      at ProcessTermError.MessageError (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:186:110)
-      at new ProcessTermError (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:226:113)
-      at ChildProcess.<anonymous> (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:30281:17)
-      at ChildProcess.emit (node:events:520:28)
-      at maybeClose (node:internal/child_process:1092:16)
-      at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)
+  Error: Command "dev" not found.
+      at new MessageError (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:186:110)
+      at /usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:87307:17
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:98:30)
+      at /usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:116:14
+      at new Promise (<anonymous>)
+      at new F (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:23451:28)
+      at /usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:95:12
+      at runCommand (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:87312:22)
+      at Object.<anonymous> (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:87412:14)
