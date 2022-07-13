@@ -118,7 +118,7 @@ const TopSection = () => {
         </GridLeft>
         <GridRight center>
           <ImageContainer>
-            <StaticImage src='../images/logo-large.png' alt='expert graphic' />
+            <StaticImage src='../images/logo-large.png' alt='expert graphic' placeholder="none" />
           </ImageContainer>
         </GridRight>
       </TwoColumnGrid>
