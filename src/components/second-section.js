@@ -34,6 +34,10 @@ const Contents = styled.div`
     line-height: 34px;
     padding: 0 50px;
     width: 70%;
+    @media only screen and (max-width: 640px) {
+     width: unset;
+     padding: 30px 50px;
+  }
   }
   & img {
     object-fit: contain;
@@ -49,6 +53,10 @@ const Contents = styled.div`
           }
         `
       : ''}
+  @media only screen and (max-width: 640px) {
+    height: unset;
+    padding-top: 46px;
+  }
 `
 
 const Container = styled.div`
@@ -69,7 +77,7 @@ const SecondSection = () => {
           </GridLeft>
           <GridRight center>
             <p>
-              Of all retail investors began investing in 2020 with little or now
+              Of all retail investors began investing in 2020 with little or no
               experience of the stock market.
             </p>
           </GridRight>

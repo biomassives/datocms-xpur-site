@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { GridLeft, TwoColumnGrid, GridRight } from './styles/styles'
 import StyledButton from './styles/StyledButton'
-import { pageMargins, color } from './styles/utils'
+import { pageMargins, color, typography } from './styles/utils'
 
 const Container = styled.section`
   width: 100%;
@@ -13,8 +13,24 @@ const Container = styled.section`
   padding-bottom: 60px;
   & h2 {
     font-size: 2rem;
+    @media only screen and (max-width: 640px) {
+        font-size: ${typography.size.m3};
+    }
   }
   background: ${color.aqua};
+  & a {
+    @media only screen and (max-width: 1024px) {
+          width: 100%;       
+      }
+  }
+
+  & ${StyledButton} {
+      width: 384px;
+      @media only screen and (max-width: 1024px) {
+          width: 100%;
+          margin-top: 20px;
+      }
+  }
 `
 
 const ApplySection = () => {

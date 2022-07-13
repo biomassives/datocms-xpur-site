@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import StyledButton from './styles/StyledButton'
 import { GridLeft, GridRight, TwoColumnGrid } from './styles/styles'
-import { pageMargins, color } from './styles/utils'
+import { pageMargins, color, typography } from './styles/utils'
 import { StaticImage } from 'gatsby-plugin-image'
 
 const Container = styled.div`
@@ -14,29 +14,47 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   padding-top: 100px;
-
   ${pageMargins};
   ${TwoColumnGrid} {
     height: 100%;
   }
-  ${GridLeft} {
-    @media only screen and (min-width: 1024px) {
-      align-items: flex-start;
-    }
+  ${GridLeft} {  
+      align-items: flex-start;  
     & > p {
       line-height: 24px;
     }
   }
+  @media only screen and (max-width: 640px) {
+      h1 {
+        font-size: ${typography.size.m3};
+    margin-top: 1rem;
+      }
+   
+  }
   ${GridRight} {
-    @media only screen and (min-width: 1024px) {
       align-items: flex-end;
-    }
+      @media only screen and (max-width: 1024px) and (min-width: 640px) {
+        align-items: flex-start;
+        padding-top: 30px;
+      }
+      @media only screen and (max-width: 640px) {
+        align-items: flex-start;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding-right: 16px;
+        padding-bottom: 16px;
+      }
+     
   }
   background: linear-gradient(
     to bottom left,
     rgba(4, 201, 255, 0.3) 0%,
     rgba(255, 255, 255, 0) 80%
   );
+  @media only screen and (max-width: 640px) {
+      min-height: 730px;
+  }
 `
 
 const StyledButtonsContainer = styled.div`
@@ -44,6 +62,16 @@ const StyledButtonsContainer = styled.div`
   grid-gap: 20px;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
+  @media only screen and (max-width: 640px) {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 0; 
+    margin-bottom: 2rem;
+    width: 100%;
+    & ${StyledButton} {
+        width: 100%;
+    }
+  }
 `
 
 const Title = styled.h1`
@@ -51,12 +79,19 @@ const Title = styled.h1`
   font-size: 5rem;
   font-weight: bold;
   font-family: avenir;
+  @media only screen and (max-width: 1024px) {
+      font-size: 2.5rem;
+  }
 `
 
 const ImageContainer = styled.div`
   max-width: 25rem;
   width: 100%;
   position: relative;
+  @media only screen and (max-width: 640px) {
+    max-width: 16rem;
+    float: left;
+  }
 `
 
 const TopSection = () => {

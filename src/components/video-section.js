@@ -21,6 +21,9 @@ const Container = styled.section`
     font-weight: bold !important;
     color: ${color.darkblue};
     margin-bottom: 40px;
+    @media only screen and (max-width: 640px) {
+        font-size: ${typography.size.m3};
+    }
   }
 `
 

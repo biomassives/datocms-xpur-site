@@ -43,7 +43,9 @@ export default function Header () {
   return (
     <StyledHeader>
       <StyledLogo className='hey'>
+      <Link to="/">
         <StaticImage src='../images/logo.png' alt='expert graphic' />
+        </Link>
       </StyledLogo>
       <StyledLinks>
         <Link to='/' className='hover:underline'>

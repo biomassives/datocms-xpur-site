@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
-import { pageMargins } from './styles/utils'
+import { pageMargins, typography } from './styles/utils'
 import {
   ThreeColumnGrid,
   GridLeft,
@@ -38,6 +38,9 @@ const Container = styled.section`
   & h2 {
     font-size: 2rem;
     padding-bottom: 1rem;
+    @media only screen and (max-width: 640px) {
+        font-size: ${typography.size.m3};
+    }
   }
 `
 
