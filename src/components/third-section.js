@@ -22,7 +22,15 @@ const Container = styled.section`
       line-height: 28px;
       width: 80%;
     }
+    @media only screen and (max-width: 1024px) {
+      
+        align-items: center;
+        text-align: center;
+        margin-top: 2rem;
+      
+    }
   }
+
 `
 
 const ThirdSection = () => {

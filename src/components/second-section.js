@@ -53,7 +53,7 @@ const Contents = styled.div`
           }
         `
       : ''}
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 1024px) {
     height: unset;
     padding-top: 46px;
   }
