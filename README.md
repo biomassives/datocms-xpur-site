@@ -1,4 +1,10 @@
-# Gatsby Blog Website
+# ANC Denver website
+
+Dedicated to improving access to technology, education, and tools among vulnerable communities.
+
+Currently working to provide 'bundles' comprised of modern fast laptop, GPL software packages, laser printer, ink, and paper to immigrant commmunites in Denver.  Two organizations, African Community Center and Afghans for Tomorrow have identified a need we are working to meet of 500 new 'bundles'.
+
+We work via donation of cash and used technology. Contact ecocommunity@protonmail.com to get involed. 
 
 This repo contains a static website written with [GatsbyJS](https://www.gatsbyjs.org/), integrated with content coming from [DatoCMS](https://www.datocms.com).
 
@@ -8,7 +14,7 @@ If you want to use try this out yourself, you first need to set up a project on 
 
 You can [sign up for a free account](https://dashboard.datocms.com/signup) and then you can simply click this button:
 
-[![Deploy with DatoCMS](https://dashboard.datocms.com/deploy/button.svg)](https://dashboard.datocms.com/deploy?repo=datocms/gatsby-blog-demo:main)
+[![Deploy with DatoCMS](https://dashboard.datocms.com/deploy/button.svg)](https://dashboard.datocms.com/deploy?repo=biomassives/datocms-xpur-site:main)
 
 ## Repo usage
 
